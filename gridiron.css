@@ -1,0 +1,134 @@
+/*  **
+  * www.neuetab.com
+  * Licensed under MIT
+  * Two ways to apply columns in this grid-container
+	1. Use "col-#-sz" if you want to set evenly defined columns (e.g. col-6-m)
+	2. Use "col-size-#" if you want to span content across specified amount of columns (e.g. col-md-6)
+		a. Use the class .row for a div containing the content that is columnized. 
+						<div class="row">
+							<div class="col-6-lg col-2-m col-1-s"></div>  (multiple breakpoints for responsiveness)
+						</div>
+ */
+ /*reset style*/
+*
+{margin:0; padding:0; border:0; outline:none; list-style-type:none; text-decoration:none;  
+ -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;}
+
+h1, h2, h3, h4, h5, h6 {font-size:100%; }
+a {cursor:pointer;} p{line-height:1.5em;}
+.grid-container{width:100%; max-width:2600px; height:100%; margin:0 auto;}
+.clearfix{clear:both; margin:.5em 0; }
+.row{width:100%; margin:1em 0; padding:0 1em;}
+.row:before,
+.row:after {content:""; display:table; clear:both;}
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12{
+	float:left;
+}
+.col-1{width:100%;}
+.col-2{ width:50%;}
+.col-3{ width:33.33%;}
+.col-4{ width:25%;}
+.col-5{ width:20%;}
+.col-6{ width:16.66%;}
+.col-7{ width:14.2857%;}
+.col-8{ width:12.5%;}
+.col-9{ width:11.11%;}
+.col-10{ width:10%;}
+.col-11{ width:9.09%;}
+.col-12{ width:8.33%;}
+
+@media all and (min-width: 18em){/*mobile phone styles 300px and up*/
+.col-1-s, .col-2-s, .col-3-s, .col-4-s, .col-5-s, .col-6-s, .col-7-s, .col-8-s .col-9-s, .col-10-s, .col-11-s, .col-12-s, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12{
+	float:left;
+	padding:0 1em; margin: .5em 0;
+}
+.col-1-s{width:100%;}
+.col-2-s{ width:50%;}
+.col-3-s{ width:33.33%;}
+.col-4-s{ width:25%;}
+.col-5-s{ width:20%;}
+.col-6-s{ width:16.66%;}
+.col-7-s{ width:14.2857%;}
+.col-8-s{ width:12.5%;}
+.col-9-s{ width:11.11%;}
+.col-10-s{ width:10%;}
+.col-11-s{ width:9.09%;}
+.col-12-s{ width:8.33%;} 
+/*to spread content across columns */
+.col-sm-12 {width: 100%;}
+.col-sm-11 {width: 91.66666667%;}
+.col-sm-10 {width: 83.33333333%;}
+.col-sm-9 {width: 75%;}
+.col-sm-8 {width: 66.66666667%;}
+.col-sm-7 {width: 58.33333333%;}
+.col-sm-6 {width: 50%;}
+.col-sm-5 {width: 41.66666667%;}
+.col-sm-4 {width: 33.33333333%;}
+.col-sm-3 {width: 25%;}
+.col-sm-2 {width: 16.66666667%;}
+.col-sm-1 {width: 8.33333333%;}
+}
+@media all and (min-width: 48em){/*tablet styles =768px*/
+ .col-1-m, .col-2-m, .col-3-m, .col-4-m, .col-5-m .col-6-m, .col-7-m, .col-8-m, .col-9-m, .col-10-m, .col-11-m, .col-12-m, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12{
+float:left;
+padding:0 .5em; 
+}
+.col-1-m{width:100%;}
+.col-2-m{ width:50%;}
+.col-3-m{ width:33.33%;}
+.col-4-m{ width:25%;}
+.col-5-m{ width:20%;}
+.col-6-m{ width:16.66%;}
+.col-7-m{ width:14.2857%;}
+.col-8-m{ width:12.5%;}
+.col-9-m{ width:11.11%;}
+.col-10-m{ width:10%;}
+.col-11-m{ width:9.09%;}
+.col-12-m{ width:8.33%;} 
+/*to spread content across columns */
+.col-md-12 {width: 100%;}
+.col-md-11 {width: 91.66666667%;}
+.col-md-10 {width: 83.33333333%;}
+.col-md-9 {width: 75%;}
+.col-md-8 {width: 66.66666667%;}
+.col-md-7 {width: 58.33333333%;}
+.col-md-6 {width: 50%;}
+.col-md-5 {width: 41.66666667%;}
+.col-md-4 {width: 33.33333333%;}
+.col-md-3 {width: 25%;}
+.col-md-2 {width: 16.66666667%;}
+.col-md-1 {width: 8.33333333%;}
+}
+@media all and (min-width: 70em){/*all other and higher 1120px+ */
+ .col-1-lg,.col-2-lg, .col-3-lg, .col-4-lg, .col-5-lg, .col-6-lg, .col-7-lg, .col-8-lg, .col-9-lg, .col-10-lg, .col-11-lg, .col-12-lg, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12{
+	float:left;
+	padding:0 .5em; 
+}
+.col-1-lg{width:100%;}
+.col-2-lg{ width:50%;}
+.col-3-lg{ width:33.33%;}
+.col-4-lg{ width:25%;}
+.col-5-lg{ width:20%;}
+.col-6-lg{ width:16.66%;}
+.col-7-lg{ width:14.2857%;}
+.col-8-lg{ width:12.5%;}
+.col-9-lg{ width:11.11%;}
+.col-10-lg{ width:10%;}
+.col-11-lg{ width:9.09%;}
+.col-12-lg{ width:8.33%;} 
+/*to spread content across columns */
+.col-lg-12 {width: 100%;}
+.col-lg-11 {width: 91.66666667%;}
+.col-lg-10 {width: 83.33333333%;}
+.col-lg-9 {width: 75%;}
+.col-lg-8 {width: 66.66666667%;}
+.col-lg-7 {width: 58.33333333%;}
+.col-lg-6 {width: 50%;}
+.col-lg-5 {width: 41.66666667%;}
+.col-lg-4 {width: 33.33333333%;}
+.col-lg-3 {width: 25%;}
+.col-lg-2 {width: 16.66666667%;}
+.col-lg-1 {width: 8.33333333%;}
+}
